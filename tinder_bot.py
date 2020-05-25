@@ -4,13 +4,13 @@ from secrets import username, password
 
 
 #open the tinder web window
-chrome_browser = webdriver.Chrome(executable_path='E:\\Selenium\\chromedriver.exe')
+chrome_browser = webdriver.Chrome(executable_path='E:\\Selenium\\chromedriver.exe')  # the executtable path should be set to location where chromedriver.exe is installed
 chrome_browser.get('https://www.tinder.com')
 chrome_browser.maximize_window()
 sleep(15)
 
 #click on the more_option_button 
-more_optn = chrome_browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[3]/span/button')
+more_optn = chrome_browser.find_element_by_xpath('/html/body/div[2]/div/div/div/div/div[3]/span/button') #more option button
 more_optn.click()
 sleep(3)
 
@@ -25,9 +25,9 @@ chrome_browser.switch_to_window(chrome_browser.window_handles[1])
 
 
 email = chrome_browser.find_element_by_id('email')
-email.send_keys(username)
+email.send_keys(username)  #sending the email_id to the web page
 passw = chrome_browser.find_element_by_id('pass')
-passw.send_keys(password)
+passw.send_keys(password)  # sending password to the web page
 login = chrome_browser.find_element_by_id('loginbutton')
 login.click()
 sleep(2)
@@ -75,5 +75,5 @@ def close_match():
     match_popup = chrome_browser.find_element_by_xpath('//*[@id="modal-manager-canvas"]/div/div/div[1]/div/div[3]/a')
     match_popup.click()
 
-print(auto_swipe())
-chrome_browser.close()
+print(auto_swipe())   # It starts the auto swiping and at the end prints the total profiles swiped right
+chrome_browser.close()  # to close the browser window after executing
