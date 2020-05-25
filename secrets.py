@@ -1,2 +1,2 @@
-username = 'milindsingh98@gmail.com'
+username = '<Enter you email>'
 password =  '<Enter your password>'
