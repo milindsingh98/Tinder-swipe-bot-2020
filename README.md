@@ -5,7 +5,7 @@ username = <"Enter your email">
 password = <"Enter your password">
 
 
-The tinder swipe bot using selenium and tiem module
+The tinder swipe bot using selenium and time module
 
 to install selenium
 
